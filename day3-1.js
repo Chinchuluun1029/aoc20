@@ -1,25 +1,17 @@
-//yeeted from reddit bc i didnt understand the question
+//yeeted from reddit bc i didnt fully understand the question
 const rows = $('pre').innerText.split('\n').filter(row => row.match(/[\#\.]/g))
-
 let result = 1;
 
 const sloper = (incX, incY) => {
-    var count = 0
-    var y = 0
-    var x = 0
-    const lastRowIndex = rows[0].length - 1
-    // Console will return number of trees
+    let count = 0, y = 0, x = 0;
+    const lastRowIndex = rows[0].length - 1;
     while (y < rows.length - 1) {
-        // As we approach end of string, make sure we return to 
-        // beginning of next string at correct index
         if ((lastRowIndex - x) < incX) {
-            x = x - lastRowIndex - 1
+            x = x - lastRowIndex - 1;
         }
-        x += incX
-        y += incY
-        if (rows[y][x] === "#") {
-            count = count + 1
-        }
+        x += incX;
+        y += incY;
+        if (rows[y][x] === "#") count++;
     }
     result *= count;
 }

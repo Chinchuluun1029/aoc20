@@ -10,8 +10,3 @@ for (let i = 0; i < splitNums.length-2; i++) {
         numSet.add(curSum-parseInt(splitNums[j]));
     }
 }
-
-i = 500
-curSum = 1500
-j = 800
-numSet: {}

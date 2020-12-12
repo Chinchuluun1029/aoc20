@@ -6,9 +6,6 @@ for (i of pwds) {
     const second = i.substring(i.indexOf("-")+1, i.indexOf(" "));
     const letter = i.substring(i.indexOf(":")-1, i.indexOf(":"));
     const pwd = i.substring(i.indexOf(":")+2);
-    if (pwd[first-1] === letter ^ pwd[second-1] === letter ) {
-        ++count;
-    }
-
+    if (pwd[first-1] === letter ^ pwd[second-1] === letter ) count++;
 }
 console.log(count);
