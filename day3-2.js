@@ -23,5 +23,9 @@ const sloper = (incX, incY) => {
     }
     result *= count;
 }
+sloper(1, 1);
 sloper(3, 1);
+sloper(5, 1);
+sloper(7, 1);
+sloper(1, 2);
 console.log("Result:", result);
